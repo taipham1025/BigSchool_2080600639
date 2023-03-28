@@ -1,5 +1,5 @@
-﻿using BigSchool.Models;
-using DocumentFormat.OpenXml.Office2010.Excel;
+﻿using BigSchool.Migrations;
+using BigSchool.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,7 +25,7 @@ namespace BigSchool.ViewModels
         public string Heading { get; set; }
         public string Action
         {
-            get { return (Id != 0) ? "Create" : "Update"; }
+            get { return (Id != 0) ? "Update" : "Create"; }
         }
         public DateTime GetDateTime()
         {
